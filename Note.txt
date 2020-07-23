@@ -1,3 +1,6 @@
+Language : Java
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,3 +25,22 @@ public class MainActivity extends AppCompatActivity {
 
 
 Note :{ not xml degain}
+
+Language : Kotlin
+
+
+class MainActivity : AppCompatActivity() {
+    var databaseReference: DatabaseReference? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+
+
+        databaseReference = FirebaseDatabase.getInstance().reference.child("Test")
+        val hashMap = HashMap<String, String>()
+        hashMap["Name"] = "Happy coding"
+        databaseReference!!.child("user").push().setValue(hashMap)
+    }
+}
+
