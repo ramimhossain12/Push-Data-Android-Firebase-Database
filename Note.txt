@@ -1,13 +1,3 @@
-package com.example.pushdataandroidfirebasedatabase;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,3 +17,8 @@ public class MainActivity extends AppCompatActivity {
         databaseReference.child("user").push().setValue(hashMap);
     }
 }
+
+
+
+
+Note :{ not xml degain}
